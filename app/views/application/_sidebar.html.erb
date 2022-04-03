@@ -1,0 +1,24 @@
+<div class="d-flex flex-column flex-shrink-0 py-3 px-3 bg-dark text-white vh-100">
+  <div class="d-flex align-items-center justify-content-center py-2">
+    <%= link_to "AMS", root_path, class: "text-white display-6 text-decoration-none" %>
+  </div>
+  <hr />
+
+  <ul class="nav nav-pills flex-column mb-auto">
+    <li class="nav-item">
+      <%= sidebar_link_to(cats_path, "🐱", "ねこ") %>
+    </li>
+    <li class="nav-item">
+      <%= sidebar_link_to(dogs_path, "🐶", "いぬ") %>
+    </li>
+    <li class="nav-item">
+      <%= sidebar_link_to(chicks_path, "🐣", "ひよこ") %>
+    </li>
+    <li class="nav-item">
+      <%= sidebar_link_to(hedgehogs_path, "🦔", "ハリネズミ") %>
+    </li>
+    <li class="nav-item">
+      <%= sidebar_link_to(owls_path, "🦉", "フクロウ") %>
+    </li>
+  </ul>
+</div>

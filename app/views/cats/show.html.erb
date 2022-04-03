@@ -1,10 +1,18 @@
-<p style="color: green"><%= notice %></p>
+<div id="<%= dom_id @cat %>">
+  <p>
+    <strong>名前:</strong>
+    <%= @cat.name %>
+  </p>
 
-<%= render @cat %>
+  <p>
+    <strong>年齢:</strong>
+    <%= @cat.age %>
+  </p>
+</div>
 
 <div>
-  <%= link_to "Edit this cat", edit_cat_path(@cat) %> |
-  <%= link_to "Back to cats", cats_path %>
+  <%= link_to "編集", edit_cat_path(@cat) %> |
+  <%= link_to "戻る", cats_path %>
 
-  <%= button_to "Destroy this cat", @cat, method: :delete %>
+  <%= button_to "削除", @cat, method: :delete %>
 </div>
