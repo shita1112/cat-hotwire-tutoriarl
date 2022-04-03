@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @owl %>
+
+<div>
+  <%= link_to "Edit this owl", edit_owl_path(@owl) %> |
+  <%= link_to "Back to owls", owls_path %>
+
+  <%= button_to "Destroy this owl", @owl, method: :delete %>
+</div>

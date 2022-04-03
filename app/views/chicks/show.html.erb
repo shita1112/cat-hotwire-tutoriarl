@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @chick %>
+
+<div>
+  <%= link_to "Edit this chick", edit_chick_path(@chick) %> |
+  <%= link_to "Back to chicks", chicks_path %>
+
+  <%= button_to "Destroy this chick", @chick, method: :delete %>
+</div>

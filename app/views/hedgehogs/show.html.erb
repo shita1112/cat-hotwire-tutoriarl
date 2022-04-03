@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @hedgehog %>
+
+<div>
+  <%= link_to "Edit this hedgehog", edit_hedgehog_path(@hedgehog) %> |
+  <%= link_to "Back to hedgehogs", hedgehogs_path %>
+
+  <%= button_to "Destroy this hedgehog", @hedgehog, method: :delete %>
+</div>

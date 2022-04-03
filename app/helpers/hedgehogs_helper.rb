@@ -1,0 +1,2 @@
+module HedgehogsHelper
+end

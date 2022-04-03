@@ -1,0 +1,2 @@
+class Owl < ApplicationRecord
+end

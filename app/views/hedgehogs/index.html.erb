@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Hedgehogs</h1>
+
+<div id="hedgehogs">
+  <% @hedgehogs.each do |hedgehog| %>
+    <%= render hedgehog %>
+    <p>
+      <%= link_to "Show this hedgehog", hedgehog %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New hedgehog", new_hedgehog_path %>

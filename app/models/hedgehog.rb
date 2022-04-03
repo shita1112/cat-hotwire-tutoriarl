@@ -1,0 +1,2 @@
+class Hedgehog < ApplicationRecord
+end
