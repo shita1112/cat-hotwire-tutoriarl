@@ -1,3 +1,3 @@
-<h1>ねこを編集する</h1>
-
-<%= render "form", cat: @cat %>
+<%= render "modal", title: "編集" do %>
+  <%= render "form", cat: @cat %>
+<% end %>

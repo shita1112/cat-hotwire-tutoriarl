@@ -9,3 +9,6 @@ application.register("form", FormController)
 
 import HelloController from "./hello_controller.js"
 application.register("hello", HelloController)
+
+import ModalController from "./modal_controller.js"
+application.register("modal", ModalController)

@@ -56,12 +56,10 @@
           <%= link_to icon_with_text("plus-circle", "登録"),
                       new_cat_path,
                       class: "btn btn-outline-primary",
-                      data: { turbo_frame: dom_id(Cat.new) }
+                      data: { turbo_frame: "modal" }
           %>
         </div>
       </div>
-
-      <%= turbo_frame_tag Cat.new %>
 
       <div id="cats">
         <%= render @cats %>
