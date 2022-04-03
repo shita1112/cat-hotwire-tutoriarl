@@ -11,7 +11,7 @@
   </div>
 
   <div class="card-body">
-    <%= search_form_for @search do |f| %>
+    <%= search_form_for @search, html: { data: { turbo_frame: "cats-list" } } do |f| %>
       <div class="row g3 mb-3">
         <div class="col-4 col-xl-2">
           <%= f.label :name_cont, "名前", class: "form-label" %>
