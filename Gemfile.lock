@@ -163,6 +163,10 @@ GEM
       thor (~> 1.0)
       zeitwerk (~> 2.5)
     rake (13.0.6)
+    ransack (3.0.0)
+      activerecord (>= 6.0.4)
+      activesupport (>= 6.0.4)
+      i18n
     redis (4.6.0)
     reline (0.3.1)
       io-console (~> 0.5)
@@ -206,6 +210,7 @@ DEPENDENCIES
   kaminari
   puma (~> 5.0)
   rails (~> 7.0.2, >= 7.0.2.3)
+  ransack
   redis (~> 4.0)
   sprockets-rails
   stimulus-rails
