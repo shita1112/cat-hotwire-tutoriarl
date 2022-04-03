@@ -1,5 +1,29 @@
-<%= bootstrap_form_with(model: cat) do |form| %>
-  <%= form.text_field :name %>
-  <%= form.number_field :age %>
-  <%= form.primary %>
+<%= turbo_frame_tag cat do %>
+  <%= bootstrap_form_with(model: cat) do |form| %>
+    <div class="row py-2 border-top">
+      <div class="col-4">
+        <%= form.text_field :name,
+                            skip_label: true,
+                            label_as_placeholder: true,
+                            wrapper: false,
+                            control_class: "form-control form-control-sm"
+        %>
+      </div>
+      <div class="col-4">
+        <%= form.number_field :age,
+                              skip_label: true,
+                              label_as_placeholder: true,
+                              wrapper: false,
+                              control_class: "form-control form-control-sm"
+        %>
+      </div>
+
+      <div class="col-4">
+        <div class="d-flex justify-content-end">
+          <%= form.primary class: "btn btn-primary btn-sm me-2" %>
+          <%= link_to "キャンセル", cat, class: "btn btn-sm btn-outline-secondary" %>
+        </div>
+      </div>
+    </div>
+  <% end %>
 <% end %>

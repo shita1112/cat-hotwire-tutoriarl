@@ -1,14 +1,4 @@
-<div id="<%= dom_id @cat %>">
-  <p>
-    <strong>名前:</strong>
-    <%= @cat.name %>
-  </p>
-
-  <p>
-    <strong>年齢:</strong>
-    <%= @cat.age %>
-  </p>
-</div>
+<%= render @cat %>
 
 <div>
   <%= link_to "編集", edit_cat_path(@cat) %> |
