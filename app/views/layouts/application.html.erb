@@ -22,9 +22,6 @@
           </div>
 
           <div class="col my-4">
-            <div id="flash">
-              <%= render "flash" %>
-            </div>
             <%= yield %>
           </div>
         </div>
@@ -32,5 +29,6 @@
     </div>
 
     <%= turbo_frame_tag "modal" %>
+    <div id="flashes" class="position-fixed top-0 end-0" style="margin: 0.75rem"></div>
   </body>
 </html>

@@ -1,13 +1,19 @@
 <% if notice %>
-  <div class="alert alert-primary alert-dismissible">
-    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-    <%= notice %>
+  <div class="mb-2 toast hide border-primary" data-controller="toast">
+    <div class="toast-header text-primary">
+      <strong class="me-auto"><%= icon_with_text("check-circle", "成功") %></strong>
+      <button class="btn-close" data-bs-dismiss="toast">
+    </div>
+    <div class="toast-body"><%= notice %></div>
   </div>
 <% end %>
 
 <% if alert %>
-  <div class="alert alert-danger alert-dismissible">
-    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-    <%= alert %>
+  <div class="mb-2 toast hide border-danger" data-controller="toast">
+    <div class="toast-header text-danger">
+      <strong class="me-auto"><%= icon_with_text("exclamation-circle", "エラー") %></strong>
+      <button class="btn-close" data-bs-dismiss="toast">
+    </div>
+    <div class="toast-body"><%= alert %></div>
   </div>
 <% end %>
