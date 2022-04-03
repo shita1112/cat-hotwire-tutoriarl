@@ -62,11 +62,10 @@
       </div>
 
       <div id="cats">
-        <%= render @cats %>
-      </div>
-
-      <div class="d-flex justify-content-end mt-3">
-        <%= paginate @cats %>
+        <%= turbo_frame_tag "cats-page-#{@cats.current_page}" do %>
+          <%= render @cats %>
+          <%= turbo_frame_tag "cats-page-#{@cats.next_page}", loading: :lazy, src: path_to_next_page(@cats) %>
+        <% end %>
       </div>
     <% end %>
   </div>
