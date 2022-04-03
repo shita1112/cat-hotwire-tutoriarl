@@ -37,25 +37,27 @@
   </div>
 
   <div class="card-body mx-3">
-    <div class="row py-2">
-      <div class="col-4 mt-auto">
-        <%= sort_link(@search, :name) %>
+    <%= turbo_frame_tag "cats-list" do %>
+      <div class="row py-2">
+        <div class="col-4 mt-auto">
+          <%= sort_link(@search, :name) %>
+        </div>
+        <div class="col-4 mt-auto">
+          <%= sort_link(@search, :age) %>
+        </div>
+        <div class="col-4 d-flex justify-content-end">
+          <%= link_to icon_with_text("plus-circle", "登録"),
+                      new_cat_path,
+                      class: "btn btn-outline-primary"
+          %>
+        </div>
       </div>
-      <div class="col-4 mt-auto">
-        <%= sort_link(@search, :age) %>
-      </div>
-      <div class="col-4 d-flex justify-content-end">
-        <%= link_to icon_with_text("plus-circle", "登録"),
-                    new_cat_path,
-                    class: "btn btn-outline-primary"
-        %>
-      </div>
-    </div>
 
-    <%= render @cats %>
+      <%= render @cats %>
 
-    <div class="d-flex justify-content-end mt-3">
-      <%= paginate @cats %>
-    </div>
+      <div class="d-flex justify-content-end mt-3">
+        <%= paginate @cats %>
+      </div>
+    <% end %>
   </div>
 </div>
