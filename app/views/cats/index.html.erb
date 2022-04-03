@@ -17,16 +17,17 @@
         data: {
           turbo_frame: "cats-list",
           controller: "form",
+          action: "input->form#submit"
         }
       }) do |f| %>
       <div class="row g3 mb-3">
         <div class="col-4 col-xl-2">
           <%= f.label :name_cont, "名前", class: "form-label" %>
-          <%= f.search_field :name_cont, class: "form-control", data: { action: "input->form#submit" } %>
+          <%= f.search_field :name_cont, class: "form-control" %>
         </div>
         <div class="col-4 col-xl-2">
           <%= f.label :age_eq, "年齢", class: "form-label" %>
-          <%= f.search_field :age_eq, class: "form-control", data: { action: "input->form#submit" } %>
+          <%= f.search_field :age_eq, class: "form-control" %>
         </div>
         <div class="col-4 d-flex align-items-end">
           <%= link_to "リセット", cats_path, class: "btn btn-outline-secondary" %>
