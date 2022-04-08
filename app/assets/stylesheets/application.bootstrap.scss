@@ -5,3 +5,22 @@ label.required:after {
   content:" *";
   color: red;
 }
+
+turbo-frame {
+  border: 1px red solid;
+  display: block;
+}
+
+turbo-frame::before {
+  content: "Frame: #" attr(id);
+  position: relative;
+  top: -14px;
+  right: -4px;
+  display: inline-block;
+  color: red;
+  font-size: 12px;
+  z-index: 9999;
+  background-color: white;
+  padding: 4px;
+  border: 1px red solid;
+}
