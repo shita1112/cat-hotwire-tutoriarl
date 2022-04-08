@@ -37,7 +37,7 @@
   </div>
 
   <div class="card-body mx-3">
-    <%= turbo_frame_tag "cats-list" do %>
+    <%= turbo_frame_tag "cats-list", autoscroll: true, data: { autoscroll_block: "start" } do %>
       <div class="row py-2">
         <div class="col-4 mt-auto">
           <%= sort_link(@search, :name) %>
