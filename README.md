@@ -1,24 +1,45 @@
-# README
+# 猫でもわかるHotwire入門 Turbo編
+これは [猫でもわかるHotwire入門 Turbo編](https://zenn.dev/shita1112/books/cat-hotwire-turbo) のチュートリアルのリポジトリです。
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+詳しくは↑の本をごらんください〜。無料です〜。
 
-Things you may want to cover:
 
-* Ruby version
+## チュートリアル1 Railsで管理画面を作る
+![](./readme/tutorial-1.gif)
 
-* System dependencies
+[チュートリアル1のデモはこちらから触れます](http://cat-hotwire-1.herokuapp.com/)
 
-* Configuration
+やったこと
 
-* Database creation
+- CRUD（一覧・編集・登録・削除）
+- ページネーション
+- 検索
+- ソート
+- 編集・登録時のインラインバリデーション
 
-* Database initialization
+## チュートリアル2 Turboで管理画面をSPA風にする
+![](./readme/tutorial-2.gif)
 
-* How to run the test suite
+[チュートリアル2のデモはこちらから触れます](http://cat-hotwire-2.herokuapp.com/)（動作が遅いのはHerokuのUSリージョンを使っているためです。Hotwireはレイテンシの影響をもろに受けます。）
 
-* Services (job queues, cache servers, search engines, etc.)
+やったこと
 
-* Deployment instructions
+- ページネーションのTurbo化
+- ソートのTurbo化
+- 検索のTurbo化
+- 編集のTurbo化
+- 登録のTurbo化
+- 削除のTurbo化
 
-* ...
+## チュートリアル3 Stimulusで管理画面をもっとSPA風にする
+![](./readme/tutorial-3.gif)
+
+[チュートリアル3のデモはこちらから触れます](http://cat-hotwire-3.herokuapp.com/)（動作が遅いのはHerokuのUSリージョンを使っているためです。Hotwireはレイテンシの影響をもろに受けます。）
+
+やったこと
+
+- 検索のインスタントサーチ化
+- 編集・登録のモーダル化
+- ページネーション・ソート・検索時にURLが更新されるように修正
+- ページネーションの無限スクロール化
+- FlashのToast化
